@@ -64,6 +64,15 @@ class Linkedlist:
 
         # print("len:",len,"| mid:",len//2)
         mid = len//2
+
+        # If inserting at the head (mid == 0)
+        if mid == 0:
+            newNode = Node(val)
+            newNode.next = self.head
+            self.head.prev = newNode
+            self.head = newNode
+            return
+        
         curr = self.head
         curr_len = 0
         while curr:

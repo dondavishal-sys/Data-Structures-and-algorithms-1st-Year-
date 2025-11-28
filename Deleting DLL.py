@@ -85,6 +85,13 @@ class Linkedlist:
         mid = len//2
         print("len: ",len,"| mid : ",mid )
 
+        # FIX — handle deletion at head OUTSIDE loop
+        if mid == 0:
+            newHead = self.head.next
+            newHead.prev = None
+            self.head = newHead
+            return
+        
         curr_len = 0
         curr = self.head
         while curr!=None:
