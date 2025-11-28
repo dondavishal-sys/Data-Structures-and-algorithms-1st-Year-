@@ -5,10 +5,9 @@ class Node:
         self.next = None
         self.prev = None
 
-
 class Linkedlist:
     def __init__(self):
-        self.head = None 
+        self.head = None
     
     def insertAtEnd(self,val):
         if self.head == None:
@@ -26,10 +25,11 @@ class Linkedlist:
 
     def displayFromStart(self):
         curr = self.head
-        while(curr):
+        while (curr!=None):
             print(curr.data,end="->")
             curr = curr.next
 
+        print()
 
     def displayFromEnd(self):
         curr = self.head 
